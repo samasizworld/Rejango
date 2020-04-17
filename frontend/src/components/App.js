@@ -30,7 +30,7 @@ function App(){
                         </div>
                         
                     </Fragment>
-                    </AlertProvider>
+                     </AlertProvider>
                 </Provider>
             );
         }

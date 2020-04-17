@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {GET_LEADS,DELETE_LEAD,ADD_LEAD,GET_ERRORS} from './types';
-
+import {createMessage} from './message';
 //GETLEADS
 
 export const getLeads = () => dispatch => {
@@ -19,6 +19,7 @@ export const deleteLead = id => dispatch => {
     axios
     .delete(`/leads/api/leads/${id}/`)
         .then(res =>{
+            dispatch(createMessage({LEAD_DELETED:'Lead Deleted'}));
             dispatch({
                 type:DELETE_LEAD,
                 payload:id
@@ -31,6 +32,7 @@ export const addLead = (lead) => dispatch => {
     axios
     .post("/leads/api/leads/", lead)
         .then(res =>{
+            dispatch(createMessage({LEAD_ADDED:'Lead Added'}));
             dispatch({
                 type:ADD_LEAD,
                 payload:res.data
