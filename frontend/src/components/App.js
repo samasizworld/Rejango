@@ -17,26 +17,23 @@ position: 'top center'
 
 
 
-class App extends Component{
-    render(){
-        return (
-            <Provider store={store}>
-                <AlertProvider template ={AlertTemplate} {...alertOptions}>
-                    <Fragment>
-                    <Header />
-                    
-                    <div className="container">
-                        <Dashboard />
-                    </div>
-                    
-                </Fragment>
-                </AlertProvider>
-            </Provider>
-        
-            
-        );
-    }
-}
+function App(){
+            return (
+                <Provider store={store}>
+                    <AlertProvider template ={AlertTemplate} {...alertOptions}>
+                        <Fragment>
+                        <Header />
+                        <Alerts />
+                        
+                        <div className="container">
+                            <Dashboard />
+                        </div>
+                        
+                    </Fragment>
+                    </AlertProvider>
+                </Provider>
+            );
+        }
 
 
 ReactDOM.render(<App />,document.getElementById('app'));
