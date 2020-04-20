@@ -10,6 +10,7 @@ export default function(state=initialState,action){
             return{
                 ...state,
                 leads: action.payload
+                
             };
         case DELETE_LEAD:
             return{
