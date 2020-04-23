@@ -10,7 +10,7 @@ if(err !== err.err){
     if(err.msg.name) alert.error(`NAME:${err.msg.name.join()}`);
     if(err.msg.email) alert.error(`EMAIL:${err.msg.email.join()}`);
     if(err.msg.message) alert.error(`MESSAGE:${err.msg.message.join()}`);
-    if(err.msg.non_field_errors) alert.error(err.msg.non_field_error.join());
+    if(err.msg.non_field_errors) alert.error(err.msg.non_field_errors.join());
     if(err.msg.username) alert.error(`USERNAME:${err.msg.username.join()}`);
     if(err.msg.password) alert.error(`PASSWORD:${err.msg.password.join()}`)
 }
