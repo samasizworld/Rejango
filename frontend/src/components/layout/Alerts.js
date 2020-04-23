@@ -10,10 +10,13 @@ if(err !== err.err){
     if(err.msg.name) alert.error(`NAME:${err.msg.name.join()}`);
     if(err.msg.email) alert.error(`EMAIL:${err.msg.email.join()}`);
     if(err.msg.message) alert.error(`MESSAGE:${err.msg.message.join()}`);
+    if(err.msg.non_field_errors) alert.error(err.msg.non_field_error.join());
+    if(err.msg.username) alert.error(err.msg.username.join());
 }
 if(message!==message.message){
     if(message.LEAD_DELETED) alert.success(message.LEAD_DELETED);
     if(message.LEAD_ADDED) alert.success(message.LEAD_ADDED);
+    if(message.passwordNotMatch) alert.error(message.passwordNotMatch);
     
 }
 },[err,message]);

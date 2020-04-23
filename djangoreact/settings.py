@@ -83,13 +83,20 @@ WSGI_APPLICATION = 'djangoreact.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+       'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'djangoreactdb',
         'USER':'postgres',
         'PASSWORD':'1234',
         'HOST':'localhost',
     }
 }
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   # }
+#}
+
 
 
 # Password validation
