@@ -1,1 +1,1 @@
-#GeneralDiseasePredictionfromSymptoms
+Simple Django React app
